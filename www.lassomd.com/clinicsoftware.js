@@ -6,38 +6,6 @@
   updateNavbar();
   window.addEventListener('scroll', updateNavbar, {passive: true});
 
-  // Own only the simplified Solutions dropdown; Webflow retains the page layout.
-  const solutions = document.querySelector('.cs-solutions');
-  const trigger = solutions?.querySelector('.cs-solutions-toggle');
-  let closeTimer;
-  const setOpen = open => {
-    clearTimeout(closeTimer);
-    if (!solutions) return;
-    navbar.style.setProperty('--cs-menu-top', `${navbar.getBoundingClientRect().bottom}px`);
-    solutions.classList.toggle('is-open', open);
-    trigger.setAttribute('aria-expanded', String(open));
-  };
-  trigger?.addEventListener('click', () => setOpen(!solutions.classList.contains('is-open')));
-  solutions?.addEventListener('pointerenter', event => {
-    if (event.pointerType === 'mouse' && matchMedia('(min-width:992px)').matches) setOpen(true);
-  });
-  solutions?.addEventListener('pointerleave', event => {
-    if (event.pointerType === 'mouse') closeTimer = setTimeout(() => setOpen(false), 220);
-  });
-  solutions?.addEventListener('focusout', event => {
-    if (!solutions.contains(event.relatedTarget)) setOpen(false);
-  });
-  document.addEventListener('click', event => {
-    if (!solutions?.contains(event.target)) setOpen(false);
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && solutions?.classList.contains('is-open')) {
-      setOpen(false);
-      trigger.focus();
-    }
-  });
-  window.addEventListener('resize', () => setOpen(false));
-
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', event => {
       event.preventDefault();
