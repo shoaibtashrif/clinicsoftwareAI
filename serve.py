@@ -19,8 +19,12 @@ ASSET_ROOTS = {
 
 class ClinicSoftwareHandler(SimpleHTTPRequestHandler):
     def end_headers(self):
-        # Revalidate pages after deployments and rollbacks.
-        self.send_header("Cache-Control", "no-cache, max-age=0, must-revalidate")
+        # Keep images/media locally cached; pages and code still revalidate after edits.
+        suffix = Path(urlsplit(self.path).path).suffix.lower()
+        if suffix in {".jpg", ".jpeg", ".png", ".webp", ".avif", ".svg", ".gif", ".ico", ".mp4", ".woff", ".woff2"}:
+            self.send_header("Cache-Control", "public, max-age=86400, must-revalidate")
+        else:
+            self.send_header("Cache-Control", "no-cache, max-age=0, must-revalidate")
         super().end_headers()
 
     def translate_path(self, path: str) -> str:

@@ -1,0 +1,9 @@
+/* Reserve intrinsic image space and show a quiet skeleton until decoding finishes. */
+img.cs-image-pending {
+ background-color:#eee8f3;
+ background-image:linear-gradient(100deg,transparent 20%,#ffffff99 45%,transparent 70%);
+ background-size:240% 100%;
+ animation:cs-image-loading 1.5s ease-in-out infinite;
+}
+@keyframes cs-image-loading { from { background-position:100% 0; } to { background-position:-100% 0; } }
+@media(prefers-reduced-motion:reduce) { img.cs-image-pending { animation:none; } }
