@@ -31,3 +31,7 @@ All four prompts requested fictional clinic branding, distinct compositions, no 
 The SVG service graphics are original code-authored illustrations, reproducible with `scripts/build_service_visuals.py`. The looping appointment video is rendered from `www.lassomd.com/visuals/appointment-demo.html`, using its `renderFrame(t)` function. It shows an illustrative conversation, not a live booking or a product capability guarantee. The conversation loops in approximately five seconds, with player controls hidden as requested and reduced-motion handling retained.
 
 Validation: browser audit of 69 marketing/editorial routes at 1440px and 390px; focused image-load, overflow and hero-size checks on the ten active marketing pages. Archived articles and resource-library thumbnails retain their editorial structure; template previews are separate websites. Matching responsive copies of the same logical section may share an asset.
+
+## Supplied specialty screenshot strip — 15 October 2026
+
+The 22 JPEG screenshots supplied by the user (`01_dental_bright_smiles` through `22_sleep_clinic_restwell`) are copied unchanged into `brand-assets/specialty-screenshots/`. The homepage uses every screenshot once per scrolling group, with a second identical group for the existing continuous animation. Full screenshots are fitted inside small landscape thumbnails; these are website examples, not claims of client engagements.
