@@ -1,0 +1,12 @@
+.env
+.env.*
+__pycache__/
+*.pyc
+hts-cache/
+hts-log.txt
+cookies.txt
+*.log
+*.db
+*.db-shm
+*.db-wal
+.DS_Store

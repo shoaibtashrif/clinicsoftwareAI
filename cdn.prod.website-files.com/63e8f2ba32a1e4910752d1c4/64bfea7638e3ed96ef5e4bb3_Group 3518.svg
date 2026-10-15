@@ -1,0 +1,16 @@
+<svg id="Group_3518" data-name="Group 3518" xmlns="http://www.w3.org/2000/svg" width="22.441" height="22.28" viewBox="0 0 22.441 22.28">
+  <g id="Group_1937" data-name="Group 1937" transform="translate(0 22.28) rotate(-90)">
+    <g id="Polygon_1" data-name="Polygon 1" transform="translate(12.57 18.031) rotate(-150)" fill="none">
+      <path d="M7.257,0l7.257,12.441H0Z" stroke="none"/>
+      <path d="M 7.257205486297607 1.984627723693848 L 1.741034507751465 11.44090461730957 L 12.77337646484375 11.44090461730957 L 7.257205486297607 1.984627723693848 M 7.257205486297607 -5.7220458984375e-06 L 14.5144157409668 12.44090461730957 L -4.76837158203125e-06 12.44090461730957 L 7.257205486297607 -5.7220458984375e-06 Z" stroke="none" fill="#8a61ea"/>
+    </g>
+    <g id="Polygon_4" data-name="Polygon 4" transform="translate(13.83 22.441) rotate(-150)" fill="none">
+      <path d="M4.162,0,8.324,7.135H0Z" stroke="none"/>
+      <path d="M 4.162245273590088 1.984630107879639 L 1.741033554077148 6.135275363922119 L 6.583456993103027 6.135275363922119 L 4.162245273590088 1.984630107879639 M 4.162245273590088 -4.291534423828125e-06 L 8.324495315551758 7.135275363922119 L -4.76837158203125e-06 7.135275363922119 L 4.162245273590088 -4.291534423828125e-06 Z" stroke="none" fill="#8a61ea"/>
+    </g>
+    <g id="Ellipse_81" data-name="Ellipse 81" transform="translate(22.28 10.638) rotate(90)" fill="none" stroke="#8a61ea" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+      <ellipse cx="2.122" cy="2.122" rx="2.122" ry="2.122" stroke="none"/>
+      <ellipse cx="2.122" cy="2.122" rx="1.622" ry="1.622" fill="none"/>
+    </g>
+  </g>
+</svg>

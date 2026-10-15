@@ -1,0 +1,18 @@
+[Unit]
+Description=ClinicSoftware.ai marketing website
+After=network-online.target warehouse-showrooms.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/others/clinicsoftware-site
+Environment=CLINICSOFTWARE_HOST=0.0.0.0
+Environment=CLINICSOFTWARE_PORT=5501
+ExecStart=/usr/bin/python3 /root/others/clinicsoftware-site/serve.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

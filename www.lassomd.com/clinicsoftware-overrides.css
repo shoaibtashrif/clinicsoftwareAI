@@ -1,0 +1,481 @@
+:root {
+  --clinic-ink: #1d1824;
+  --clinic-violet: #7356ba;
+  --clinic-coral: #ff637d;
+  --clinic-soft: #f5f1f7;
+}
+
+body {
+  padding-top: 0;
+}
+
+.navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(37,18,83,.1);
+  border-radius: 0;
+  background: rgba(255,255,255,.97) !important;
+  box-shadow: 0 .45rem 1.5rem rgba(29,24,36,.08);
+  backdrop-filter: blur(18px);
+  transition: box-shadow .25s ease, transform .25s ease, background .25s ease;
+  overflow: visible !important;
+}
+
+.navbar.is-scrolled {
+  background: rgba(255,255,255,.985) !important;
+  box-shadow: 0 .65rem 2rem rgba(29,24,36,.12);
+  transform: none;
+}
+
+.navbar .navbar_wrapper {
+  min-height: 4.65rem;
+}
+
+.navbar .nav-link-text,
+.navbar .text-weight-bold {
+  color: var(--clinic-ink);
+  transition: color .2s ease;
+}
+
+.navbar a:hover .nav-link-text,
+.navbar .w-dropdown-toggle:hover .nav-link-text {
+  color: var(--clinic-violet);
+}
+
+.navbar .dd-list {
+  overflow: visible !important;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.navbar .dd-list.w--open,
+.navbar .dd-list.w--open .dd-list-wrapper {
+  height: auto !important;
+  overflow: visible !important;
+  visibility: visible !important;
+}
+
+.navbar .dd-list-wrapper {
+  border: 1px solid rgba(37,18,83,.08);
+  border-radius: .85rem;
+  background: rgba(255,255,255,.985);
+  box-shadow: 0 1.5rem 4rem rgba(29,24,36,.2);
+}
+
+.navbar .dd-list-wrapper .text-weight-bold,
+.navbar .dd-list-wrapper .dd-link,
+.navbar .dd-list-wrapper .nav-link-text { color: var(--clinic-ink); }
+
+.navbar .button.is-purple-n,
+.navbar .button.is-nav {
+  border: 0;
+  background: linear-gradient(115deg,var(--clinic-coral),#ff8177) !important;
+  box-shadow: 0 .75rem 1.8rem rgba(255,91,121,.24);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.navbar .nav-cta-wrapper > a.nav-link[href$="contact-sales.html"],
+.navbar .nav-cta-wrapper > a.nav-link[href$="contact-support.html"] {
+  display: none;
+}
+
+.navbar .nav-cta-wrapper .button {
+  min-width: 10.5rem;
+  white-space: nowrap;
+}
+
+.home-hero-video.is-home {
+  background: linear-gradient(120deg,rgba(37,18,83,.1),rgba(131,84,234,.04)),
+    url('/cdn.prod.website-files.com/63ea9414c0cafb5f83b960e1/69bd8bb1125633ae5f37c12d_6%20corners.avif') center top / cover no-repeat !important;
+}
+
+.home-hero-video.is-home video {
+  visibility: hidden;
+}
+
+.navbar .button.is-purple-n:hover,
+.navbar .button.is-nav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2.1rem rgba(255,91,121,.32);
+}
+
+.navbar_brand {
+  min-width: 14rem;
+  display: flex !important;
+  align-items: center;
+}
+
+.navbar_brand .navbar_logo {
+  display: block !important;
+  width: 14rem;
+  height: auto;
+}
+
+.navbar_brand::before {
+  content: none;
+}
+
+.footer-logo svg {
+  display: none;
+}
+
+.footer-logo::before {
+  content: none;
+}
+
+.clinicsoftware-footer-logo { width: min(18rem, 80vw); height: auto; display: block; }
+.lasso-abs-box.is-hero { display: none !important; }
+
+/* Small visual changes keep the strong reference structure while giving the
+   ClinicSoftware platform its own rhythm and surface treatment. */
+.button { border-radius: .7rem !important; }
+.review-card,
+.pricing-card,
+.homepage-usp-card { border-radius: 1rem !important; box-shadow: 0 .8rem 2.5rem rgba(29,24,36,.07); }
+.text-color-purple,
+.text-color-violet { color: var(--clinic-violet) !important; }
+
+@media (min-width: 992px) {
+  .navbar .dd-list {
+    position: fixed !important;
+    top: 6rem !important;
+    left: 50% !important;
+    right: auto !important;
+    width: min(62rem, calc(100vw - 4rem)) !important;
+    transform: translateX(-50%) !important;
+    padding-top: .35rem;
+  }
+  /* Keep a continuous hover target between the dark bar and mega-menu. */
+  .navbar .dd-list::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1.8rem;
+    height: 2.15rem;
+  }
+  .navbar .dd-list-wrapper {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100% !important;
+    padding: 1rem 1.15rem !important;
+  }
+  .navbar .dd-list-wrapper .dd-link,
+  .navbar .dd-list-wrapper .dd-normal {
+    font-size: .84rem !important;
+    line-height: 1.3 !important;
+  }
+  .navbar .dd-list-wrapper .text-weight-bold {
+    font-size: .92rem !important;
+    line-height: 1.3 !important;
+  }
+  .navbar .dd-list-wrapper .menu-icon {
+    width: 1.1rem !important;
+    height: 1.1rem !important;
+  }
+  .navbar .dd-list-block { flex: 1 1 0; min-width: 0; }
+  .navbar .dd-sub-links-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: .45rem 1rem;
+  }
+  .navbar .dd-link { min-width: 0; }
+
+  /* Keep the Website Design child inside the mega-menu. The source site used
+     a second flyout, which placed the portfolio panel far away from its item. */
+  .navbar .dd-main-n {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+  }
+  .navbar .dd-main-n > .dd-normal {
+    min-height: auto;
+    padding: 0 !important;
+  }
+  .navbar .dd-main-n > .dd-normal .arrow-embed {
+    display: none !important;
+  }
+  .navbar .dd-main-n > .dd-list-sub {
+    position: static !important;
+    display: block !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: .25rem 0 0 2.15rem !important;
+    padding: 0 !important;
+    border: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .navbar .dd-main-n .dd-sub-container {
+    display: block !important;
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .navbar .dd-main-n .dd-sub-container > .dd-link {
+    display: none !important;
+  }
+  .navbar .dd-main-n .dd-sub-links-wrap.is-3 {
+    display: block !important;
+  }
+  .navbar .dd-main-n .dd-sub-links-wrap.is-3 .dd-link {
+    display: block !important;
+    padding: .08rem 0 !important;
+    color: #62586e !important;
+    font-size: .78rem !important;
+    line-height: 1.3;
+    white-space: normal;
+  }
+  .navbar .dd-main-n .dd-sub-links-wrap.is-3 .dd-link > div {
+    font-size: 0;
+  }
+  .navbar .dd-main-n .dd-sub-links-wrap.is-3 .dd-link > div::after {
+    content: "View portfolio";
+    font-size: .78rem;
+  }
+  .navbar .dd-main-n .dd-sub-links-wrap.is-3 .menu-icon {
+    display: none !important;
+  }
+}
+
+.pricing-recommended-box .pricing-recommend::after {
+  content: "";
+}
+
+@media (max-width: 991px) {
+  body { padding-top: 0; }
+
+  .navbar {
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .navbar .navbar_wrapper {
+    min-height: 4.25rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+
+  .navbar_brand {
+    min-width: 0;
+    max-width: calc(100% - 4.5rem);
+  }
+
+  .navbar_brand .navbar_logo {
+    width: min(13rem, 58vw);
+  }
+
+  .navbar .navbar_menu-btn {
+    display: flex !important;
+    width: 3.25rem !important;
+    height: 3.25rem !important;
+    flex: 0 0 3.25rem;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: .75rem;
+    background: var(--clinic-violet);
+    color: #fff;
+  }
+
+  .navbar .navbar_menu-btn.w--open { background: var(--clinic-violet); }
+
+  .navbar .navbar_menu-icon {
+    display: flex !important;
+    width: 1.5rem;
+    height: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    line-height: 1 !important;
+  }
+
+  .navbar .navbar_menu-icon::before {
+    display: block;
+    line-height: 1 !important;
+  }
+
+  .navbar .nav-menu {
+    max-height: calc(100dvh - 6.5rem);
+    overflow-y: auto !important;
+    border: 1px solid rgba(37,18,83,.1);
+    border-radius: 0 0 .75rem .75rem;
+    background: #fff !important;
+    box-shadow: 0 1.25rem 2.75rem rgba(29,24,36,.18);
+  }
+
+  .navbar .navbar_menu {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: .8rem !important;
+    gap: .65rem !important;
+    background: #fff !important;
+  }
+
+  .navbar .nav_main_links,
+  .navbar .nav-cta-wrapper {
+    width: 100%;
+    gap: .15rem !important;
+  }
+
+  .navbar .dd,
+  .navbar .nav-link,
+  .navbar .dd-toggle {
+    width: 100%;
+  }
+
+  .navbar .dd,
+  .navbar .dd-toggle {
+    display: block;
+  }
+
+  .navbar .dd-toggle,
+  .navbar .nav_main_links > .nav-link,
+  .navbar .nav-cta-wrapper > .nav-link {
+    min-height: 0;
+    padding: .72rem .8rem !important;
+    border-radius: .55rem;
+  }
+
+  .navbar .dd-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+  }
+
+  .navbar .dd-toggle:hover,
+  .navbar .nav_main_links > .nav-link:hover,
+  .navbar .nav-cta-wrapper > .nav-link:hover {
+    background: var(--clinic-soft);
+  }
+
+  .navbar .nav-link-text,
+  .navbar .text-weight-bold {
+    color: var(--clinic-ink) !important;
+  }
+
+  .navbar .nav-link-text {
+    font-size: .95rem;
+    line-height: 1.25;
+  }
+
+  .navbar .dd-toggle .arrow-embed {
+    color: var(--clinic-violet);
+  }
+
+  .navbar .dd-list,
+  .navbar .dd-list-sub {
+    position: static !important;
+    width: 100% !important;
+    transform: none !important;
+    padding: 0 !important;
+  }
+
+  .navbar .dd-list.w--open,
+  .navbar .dd-list-sub.w--open {
+    display: block !important;
+  }
+
+  .navbar .dd-list.w--open .dd-main-n > .dd-list-sub {
+    display: block !important;
+  }
+
+  .navbar .dd-main-n > .dd-list-sub .dd-sub-container {
+    margin: 0 !important;
+    padding: 0 0 .2rem 2rem !important;
+    background: transparent !important;
+  }
+
+  .navbar .dd-main-n > .dd-list-sub,
+  .navbar .dd-main-n > .dd-list-sub .dd-sub-links-wrap.is-3,
+  .navbar .dd-main-n > .dd-list-sub .dd-sub-links-wrap.is-3 .dd-link {
+    width: 100% !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .navbar .dd-main-n > .dd-list-sub .dd-sub-links-wrap.is-3 .dd-link {
+    white-space: nowrap;
+  }
+
+  .navbar .dd-main-n > .dd-list-sub {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  .navbar .dd-main-n > .dd-list-sub .dd-sub-container > .dd-link {
+    display: none !important;
+  }
+
+  .navbar .dd-list-wrapper,
+  .navbar .dd-sub-container {
+    width: 100% !important;
+    margin: .15rem 0 .4rem !important;
+    padding: .65rem !important;
+    border: 0 !important;
+    border-radius: .65rem;
+    background: var(--clinic-soft) !important;
+    box-shadow: none !important;
+  }
+
+  .navbar .dd-list-wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: .7rem !important;
+  }
+
+  .navbar .dd-list-wrapper .dd-sub-links-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .15rem;
+  }
+
+  .navbar .dd-list-wrapper .dd-link,
+  .navbar .dd-sub-container .dd-link,
+  .navbar .dd-list-wrapper .dd-normal {
+    min-height: 0;
+    padding: .45rem .5rem !important;
+    color: var(--clinic-ink) !important;
+    font-size: .86rem !important;
+    line-height: 1.3;
+  }
+
+  .navbar .dd-list-wrapper .menu-icon,
+  .navbar .dd-sub-container .menu-icon {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
+  .navbar .nav-cta-wrapper {
+    padding-top: .5rem;
+    border-top: 1px solid rgba(37,18,83,.1);
+  }
+
+  .navbar .nav-cta-wrapper .button {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+}

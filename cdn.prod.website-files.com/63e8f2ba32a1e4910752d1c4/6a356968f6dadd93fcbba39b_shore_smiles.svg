@@ -1,0 +1,88 @@
+<svg width="760" height="1180" viewBox="0 0 760 1180" xmlns="http://www.w3.org/2000/svg" font-family="Poppins">
+  <defs>
+    <linearGradient id="trendTop" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6C4BD8"/>
+      <stop offset="1" stop-color="#7B5CE6"/>
+    </linearGradient>
+    <linearGradient id="trendBot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C24DEE"/>
+      <stop offset="1" stop-color="#A93BE8"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#3A2A6B" flood-opacity="0.10"/>
+    </filter>
+    <filter id="dotShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#5B3FA0" flood-opacity="0.30"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="1180" fill="#F5F2FB"/>
+
+  <rect x="40" y="40" width="680" height="540" rx="34" fill="#FFFFFF" filter="url(#softShadow)"/>
+
+  <circle cx="380" cy="290" r="150" fill="none" stroke="#ECE9F4" stroke-width="46"/>
+  <g transform="rotate(-90 380 290)" stroke-width="46" fill="none" stroke-linecap="butt">
+    <circle cx="380" cy="290" r="150" stroke="#F7A50C" stroke-dasharray="615.9 326.6" stroke-dashoffset="0"/>
+    <circle cx="380" cy="290" r="150" stroke="#E4C5F4" stroke-dasharray="68.4 874.1" stroke-dashoffset="-625.9"/>
+    <circle cx="380" cy="290" r="150" stroke="#B23CEE" stroke-dasharray="228.1 714.4" stroke-dashoffset="-704.3"/>
+  </g>
+  <text x="380" y="288" text-anchor="middle" font-size="118" font-weight="700" fill="#1E1A5E" letter-spacing="-2">80</text>
+  <text x="380" y="334" text-anchor="middle" font-size="34" font-weight="600" fill="#1E1A5E">New</text>
+  <text x="380" y="374" text-anchor="middle" font-size="34" font-weight="600" fill="#1E1A5E">Patients</text>
+
+  <g font-size="26" font-weight="500" fill="#1E1A5E">
+    <circle cx="138" cy="512" r="11" fill="#F7A50C"/>
+    <text x="158" y="521">SEO (54)</text>
+    <circle cx="330" cy="512" r="11" fill="#E4C5F4"/>
+    <text x="350" y="521">Social (6)</text>
+    <circle cx="540" cy="512" r="11" fill="#B23CEE"/>
+    <text x="560" y="521">PPC (20)</text>
+  </g>
+
+  <rect x="40" y="610" width="680" height="530" rx="34" fill="#FFFFFF" filter="url(#softShadow)"/>
+
+  <g fill="#ECE8F6">
+    <rect x="121" y="700" width="9" height="375" rx="4"/>
+    <rect x="296" y="700" width="9" height="375" rx="4"/>
+    <rect x="471" y="700" width="9" height="375" rx="4"/>
+    <rect x="646" y="700" width="9" height="375" rx="4"/>
+  </g>
+  <g fill="#EEEAF7">
+    <rect x="180" y="995" width="6" height="80" rx="3"/>
+    <rect x="238" y="1005" width="6" height="70" rx="3"/>
+    <rect x="355" y="1000" width="6" height="75" rx="3"/>
+    <rect x="413" y="1010" width="6" height="65" rx="3"/>
+    <rect x="530" y="995" width="6" height="80" rx="3"/>
+    <rect x="588" y="1005" width="6" height="70" rx="3"/>
+  </g>
+
+  <polyline points="125,935 300,878 475,858 650,765" fill="none" stroke="url(#trendTop)" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="125,1015 300,985 475,930 650,895" fill="none" stroke="url(#trendBot)" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <g filter="url(#dotShadow)">
+    <circle cx="125" cy="935" r="17" fill="#6C4BD8"/>
+    <circle cx="300" cy="878" r="17" fill="#7254DF"/>
+    <circle cx="475" cy="858" r="17" fill="#7556E1"/>
+    <circle cx="650" cy="765" r="20" fill="#7B5CE6"/>
+  </g>
+  <g filter="url(#dotShadow)">
+    <circle cx="125" cy="1015" r="17" fill="#C24DEE"/>
+    <circle cx="300" cy="985" r="17" fill="#BC47EC"/>
+    <circle cx="475" cy="930" r="17" fill="#B541EA"/>
+    <circle cx="650" cy="895" r="20" fill="#A93BE8"/>
+  </g>
+
+  <text x="622" y="688" text-anchor="middle" font-size="42" font-weight="700" fill="#15131A">$120K+</text>
+  <text x="622" y="712" text-anchor="middle" font-size="18" font-weight="600" fill="#15131A">New Patient</text>
+  <text x="622" y="733" text-anchor="middle" font-size="18" font-weight="600" fill="#15131A">Production</text>
+
+  <text x="622" y="838" text-anchor="middle" font-size="42" font-weight="700" fill="#15131A">80</text>
+  <text x="622" y="862" text-anchor="middle" font-size="18" font-weight="600" fill="#15131A">New Patients</text>
+
+  <g font-size="26" font-weight="600" fill="#1E1A5E" text-anchor="middle">
+    <text x="125" y="1110">Q1</text>
+    <text x="300" y="1110">Q2</text>
+    <text x="475" y="1110">Q3</text>
+    <text x="650" y="1110">Q4</text>
+  </g>
+</svg>
