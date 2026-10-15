@@ -15,7 +15,7 @@ pages={
 'dental-marketing-software/calls-management.html':('Patient Conversations',P+'conversation-hero.svg','graphic'),
 'dental-marketing-software/online-scheduling.html':('Online Scheduling',P+'calendar-hero.svg','graphic'),
 'specialties.html':('Specialties','/brand-assets/clinic-website-preview-original.webp','photo'),
-'after-hours-voice.html':('After Hours Voice',P+'voice-hero.svg','graphic'),
+'after-hours-voice.html':('After Hours Voice',P+'voice-hero.svg','device'),
 }
 for name,(label,media,kind) in pages.items():
  path=R/name;s=BeautifulSoup(path.read_text(),'html.parser');main=s.find('main');first=main.find(recursive=False)
