@@ -59,7 +59,7 @@
   }
   if (!chatHost || document.querySelector('script[data-clinicsoftware-chat]')) return;
   const script = document.createElement('script');
-  script.src = `${chatHost.replace(/\/$/, '')}/static/clinicsoftware-embed.js?v=20261012-1`;
+  script.src = `${chatHost.replace(/\/$/, '')}/static/clinicsoftware-embed.js?v=20261015-lavender`;
   script.defer = true;
   script.dataset.clinicsoftwareChat = 'true';
   document.body.append(script);
