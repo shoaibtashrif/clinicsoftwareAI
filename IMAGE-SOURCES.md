@@ -15,3 +15,19 @@ Prompt set: generate premium realistic marketing artwork in those compositions, 
 Previously generated `clinic-team.webp` and `clinic-professional.webp` are reused, as requested. Other original SVG assets depict scheduling, search, phone and campaign interface concepts. Figures in these illustrations are sample data. `service-frame-*` and `fitted-*` files embed the original artwork within the existing image dimensions, without changing HTML layout.
 
 Real integration-platform logos and existing videos are retained. Archived articles, third-party case studies and external template previews have not been comprehensively reworked; this is not a claim that every historical asset on the mirrored site has been replaced.
+
+## Consistency update — 15 October 2026
+
+The ten active marketing/service pages now share a 6:5 hero media frame, 30px corners and responsive sizing. This update deliberately standardizes the hero markup; existing body section layouts are retained except for the newly illustrated After Hours Voice sections and obsolete layered phone artwork.
+
+New imagegen assets in `brand-assets/consistent/`:
+- `brand-direction.webp`: original premium photorealistic studio consultation, male and female designers reviewing a clinic identity mood board, ivory/lavender/rose palette.
+- `brand-logo.webp`: original Willow Clinic leaf-mark sketches and embossed logo presentation, premium paper and soft natural light.
+- `brand-cards.webp`: original Willow Clinic business-card stationery composition, ivory paper, lavender accents, professional photographic styling.
+- `brand-signage.webp`: original Willow Clinic reception signage and standing display in a welcoming contemporary interior.
+
+All four prompts requested fictional clinic branding, distinct compositions, no Lasso branding, no real clinic logos or watermarks. These are illustrative concepts, not actual client projects. The previous gender restriction is withdrawn.
+
+The SVG service graphics are original code-authored illustrations, reproducible with `scripts/build_service_visuals.py`. The looping appointment video is rendered from `www.lassomd.com/visuals/appointment-demo.html`, using its `renderFrame(t)` function. It shows an illustrative conversation, not a live booking or a product capability guarantee. Native video controls and reduced-motion handling are provided.
+
+Validation: browser audit of 69 marketing/editorial routes at 1440px and 390px; focused image-load, overflow and hero-size checks on the ten active marketing pages. Archived articles and resource-library thumbnails retain their editorial structure; template previews are separate websites. Matching responsive copies of the same logical section may share an asset.
