@@ -493,3 +493,41 @@ body {
 }
 body { background-color: #fcfaf7; }
 .home-hero_component.is-home { background: linear-gradient(135deg, #fcfaf7 35%, #f3eff8); }
+
+/* Replace the static hero artwork in its existing container. */
+.home-hero-video.is-home { background: url('/brand-assets/clinic-website-preview.webp') center / cover no-repeat !important; }
+
+.navbar .nav_main_links { gap: 1.8rem; }
+.cs-solutions { position: static; }
+.cs-solutions-toggle { display:flex; align-items:center; gap:.6rem; border:0; padding:.9rem 0; background:transparent; cursor:pointer; font:inherit; font-weight:700; }
+.cs-solutions-toggle span { color:var(--clinic-violet); }
+.cs-solutions-panel { display:none; position:fixed; top:var(--cs-menu-top,6rem); left:50%; transform:translateX(-50%); width:min(52rem,calc(100vw - 3rem)); padding:1.35rem 1.5rem; grid-template-columns:1fr 1fr; gap:1.75rem; border:1px solid #e7e1ec; border-radius:0 0 1rem 1rem; background:#fffcfa; box-shadow:0 1rem 2.5rem rgba(41,42,64,.14); z-index:10000; }
+.cs-solutions-panel::before { content:""; position:absolute; top:-12px; left:0; right:0; height:14px; }
+.cs-solutions.is-open .cs-solutions-panel { display:grid; }
+.cs-solutions-panel > div + div { border-left:1px solid #e7e1ec; padding-left:1.75rem; }
+.cs-solutions-panel h2 { font-size:.93rem; line-height:1.4; margin:0 0 .8rem; font-weight:700; color:var(--clinic-ink); }
+.cs-menu-grid { display:grid; grid-template-columns:1fr 1fr; gap:.3rem .65rem; }
+.cs-menu-grid a { display:block; font-size:.83rem; line-height:1.45; padding:.55rem .65rem; border-radius:.4rem; color:var(--clinic-ink); text-decoration:none; }
+.cs-menu-grid a:hover, .cs-menu-grid a:focus-visible { background:#eee8f3; color:#514369; }
+.cs-solutions-toggle:focus-visible { outline:2px solid var(--clinic-violet); outline-offset:3px; }
+.cs-detail-page { padding:5rem 0; background:linear-gradient(145deg,#fcfaf7,#f4f1f5); }
+.cs-detail-page h1 { max-width:55rem; margin-bottom:1.5rem; }
+.cs-detail-page > div > div > p { max-width:48rem; }
+.cs-specialty-columns { display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin:3rem 0; }
+.cs-specialty-columns h2 { font-size:1.5rem; margin:1.4rem 0 1rem; }
+.cs-specialty-columns li { padding:.6rem 0; line-height:1.6; }
+@media(max-width:991px) {
+ .navbar .nav_main_links { gap:0; }
+ .cs-solutions { width:100%; }
+ .cs-solutions-toggle { width:100%; justify-content:space-between; padding:1rem 0; color:var(--clinic-ink); }
+ .cs-solutions-panel { position:static; transform:none; width:100%; padding:1rem; border-radius:.7rem; box-shadow:none; background:#f4f1f5; gap:1.2rem; grid-template-columns:1fr; }
+ .cs-solutions-panel::before { display:none; }
+ .cs-solutions-panel > div + div { border-left:0; padding-left:0; padding-top:1rem; border-top:1px solid #e0d9e8; }
+ .cs-menu-grid { grid-template-columns:1fr 1fr; }
+ .navbar .nav-menu { max-height:calc(100dvh - 5rem); overflow-y:auto !important; }
+ .cs-specialty-columns { grid-template-columns:1fr; gap:1rem; }
+ .cs-detail-page { padding:3rem 0; }
+}
+@media(max-width:480px) { .cs-menu-grid { grid-template-columns:1fr; } }
+
+.cs-solutions-panel { text-align:left; }

@@ -25,8 +25,8 @@ for p in r.rglob('*.html'):
  if not links:continue
  links.clear();links.append(BeautifulSoup(nav,'html.parser'))
  cta=header.select_one('.nav-cta-wrapper');cta.clear()
- cta.append(BeautifulSoup('<a class="nav-link w-inline-block" href="/after-hours-voice.html"><div class="nav-link-text">After Hours Voice</div></a><a class="button is-purple-n is-n w-inline-block" href="/contact-sales.html">Request Site Mockup</a>','html.parser'))
- for link in s.select('link[href*="clinicsoftware-overrides.css"]'):link['href']=link['href'].split('?')[0]+'?v=20261015-refine1'
- for js in s.select('script[src*="clinicsoftware.js"]'):js['src']=js['src'].split('?')[0]+'?v=20261015-refine1'
+ cta.append(BeautifulSoup('<a class="nav-link w-inline-block" href="/dental-marketing-software/lead-tracking.html"><div class="nav-link-text">Virtual Frontdesk</div></a><a class="nav-link w-inline-block" href="/after-hours-voice.html"><div class="nav-link-text">After Hours Voice</div></a><a class="button is-purple-n is-n w-inline-block" href="/contact-sales.html">Request Site Mockup</a>','html.parser'))
+ for link in s.select('link[href*="clinicsoftware-overrides.css"]'):link['href']=link['href'].split('?')[0]+'?v=20261015-approved2'
+ for js in s.select('script[src*="clinicsoftware.js"]'):js['src']=js['src'].split('?')[0]+'?v=20261015-approved2'
  p.write_text(str(s));count+=1
 print('Updated navigation on',count,'pages')
