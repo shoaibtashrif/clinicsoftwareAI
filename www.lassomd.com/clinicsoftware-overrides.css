@@ -495,7 +495,7 @@ body { background-color: #fcfaf7; }
 .home-hero_component.is-home { background: linear-gradient(135deg, #fcfaf7 35%, #f3eff8); }
 
 /* Replace the static hero artwork in its existing container. */
-.home-hero-video.is-home { background: url('/brand-assets/clinic-website-preview.webp') center / cover no-repeat !important; }
+.home-hero-video.is-home { background: url('/brand-assets/clinic-website-preview-original.webp') center / cover no-repeat !important; }
 
 .navbar .nav_main_links { gap: 1.8rem; }
 .cs-solutions { position: static; }
