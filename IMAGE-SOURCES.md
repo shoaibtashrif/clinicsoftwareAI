@@ -35,3 +35,5 @@ Validation: browser audit of 69 marketing/editorial routes at 1440px and 390px; 
 ## Supplied specialty screenshot strip — 15 October 2026
 
 The 22 JPEG screenshots supplied by the user (`01_dental_bright_smiles` through `22_sleep_clinic_restwell`) are copied unchanged into `brand-assets/specialty-screenshots/`. The homepage uses every screenshot once per scrolling group, with a second identical group for the existing continuous animation. Full screenshots are fitted inside small landscape thumbnails; these are website examples, not claims of client engagements.
+
+Homepage hero updated to the user-supplied “WhatsApp Image 2026-10-15 at 3.49.35 AM.jpeg”, copied unchanged as `brand-assets/clinicsoftware-never-miss-booking.jpg`. The full concept screenshot is contained without cropping in the existing hero frame.

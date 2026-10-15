@@ -6,7 +6,7 @@ import copy
 R=Path(__file__).resolve().parents[1]/'www.lassomd.com'
 P='/brand-assets/consistent/'
 pages={
-'index.html':('Home','/brand-assets/clinic-website-preview-original.webp','photo'),
+'index.html':('Home','/brand-assets/clinicsoftware-never-miss-booking.jpg','graphic'),
 'dental-marketing/website-design.html':('Website Design','/brand-assets/clinic-website-preview.webp','photo'),
 'dental-marketing/creative-branding.html':('Creative Branding','/brand-assets/clinic-branding-generated.webp','photo'),
 'dental-marketing/dental-seo.html':('Search Engine Optimization',P+'search-hero.svg','graphic'),
