@@ -531,3 +531,17 @@ body { background-color: #fcfaf7; }
 @media(max-width:480px) { .cs-menu-grid { grid-template-columns:1fr; } }
 
 .cs-solutions-panel { text-align:left; }
+
+/* Readable specialty artwork inside the existing moving cards. */
+.client-logo-img[src*="/brand-assets/specialty-"] {
+  width: 144px;
+  height: 90px;
+  max-width: 90%;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1 !important;
+}
+/* Soften marketing artwork without affecting logos, icons or page geometry. */
+main img[src*="/brand-assets/"]:not(.client-logo-img):not(.review-img):not(.menu-icon) {
+  border-radius: 16px;
+}
