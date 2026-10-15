@@ -483,3 +483,13 @@ body {
 /* Simplified navigation; existing content layout retained. */
 
 .cs-solutions-panel { text-align:left; }
+
+/* Subtle warm backgrounds only: approved typography and accent colors stay. */
+:root {
+  --grey: #f7f5f2;
+  --light-grey: #fcfaf7;
+  --white-smoke: #faf8f5;
+  --smoke: #faf8f5;
+}
+body { background-color: #fcfaf7; }
+.home-hero_component.is-home { background: linear-gradient(135deg, #fcfaf7 35%, #f3eff8); }
