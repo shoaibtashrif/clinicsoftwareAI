@@ -545,3 +545,25 @@ body { background-color: #fcfaf7; }
 main img[src*="/brand-assets/"]:not(.client-logo-img):not(.review-img):not(.menu-icon) {
   border-radius: 16px;
 }
+
+/* Match the homepage's 30px corners and fill existing artwork frames. */
+main img[src*="/brand-assets/"]:not(.client-logo-img):not(.review-img):not(.menu-icon) {
+  border-radius: 30px;
+}
+.product-image-wrap {
+  border-radius: 30px;
+  overflow: hidden;
+}
+.product-image-wrap > img[src*="/brand-assets/"] {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+}
+main .hero-component-tabs > img[src*="/brand-assets/"],
+main .standard_right-block > img[src*="/brand-assets/"],
+main .cta-img[src*="/brand-assets/"] {
+  object-fit: cover;
+}
+.product-image-wrap > img[src*="/brand-assets/"] { object-position: center top; }
