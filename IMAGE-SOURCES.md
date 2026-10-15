@@ -28,6 +28,6 @@ New imagegen assets in `brand-assets/consistent/`:
 
 All four prompts requested fictional clinic branding, distinct compositions, no Lasso branding, no real clinic logos or watermarks. These are illustrative concepts, not actual client projects. The previous gender restriction is withdrawn.
 
-The SVG service graphics are original code-authored illustrations, reproducible with `scripts/build_service_visuals.py`. The looping appointment video is rendered from `www.lassomd.com/visuals/appointment-demo.html`, using its `renderFrame(t)` function. It shows an illustrative conversation, not a live booking or a product capability guarantee. Native video controls and reduced-motion handling are provided.
+The SVG service graphics are original code-authored illustrations, reproducible with `scripts/build_service_visuals.py`. The looping appointment video is rendered from `www.lassomd.com/visuals/appointment-demo.html`, using its `renderFrame(t)` function. It shows an illustrative conversation, not a live booking or a product capability guarantee. The conversation loops in approximately five seconds, with player controls hidden as requested and reduced-motion handling retained.
 
 Validation: browser audit of 69 marketing/editorial routes at 1440px and 390px; focused image-load, overflow and hero-size checks on the ten active marketing pages. Archived articles and resource-library thumbnails retain their editorial structure; template previews are separate websites. Matching responsive copies of the same logical section may share an asset.

@@ -36,7 +36,7 @@ for name,(label,media,kind) in pages.items():
    extras.append(str(e))
  cta=first.select_one('a.button');href=cta.get('href','/contact-sales.html') if cta else '/contact-sales.html'
  label_cta=(cta.select_one('.button-text') or cta).get_text(' ',strip=True) if cta else 'Request Site Mockup'
- if kind=='video':visual=f'<video class="cs-hero-media" autoplay muted loop playsinline controls preload="metadata" poster="{P}appointment-poster.webp" data-appointment-demo aria-label="Illustrative appointment booking conversation"><source src="{media}" type="video/mp4"/></video>'
+ if kind=='video':visual=f'<video class="cs-hero-media" autoplay muted loop playsinline disablepictureinpicture preload="metadata" poster="{P}appointment-poster.webp" data-appointment-demo aria-label="Illustrative appointment booking conversation"><source src="{media}" type="video/mp4"/></video>'
  else:visual=f'<img class="cs-hero-media" src="{media}" width="1200" height="1000" alt="{escape(label)} illustration" fetchpriority="high"/>'
  breadcrumb='' if name=='index.html' else f'<nav class="cs-hero-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true"> / </span><span>{escape(label)}</span></nav>'
  markup=f'<section class="cs-service-hero"><div class="cs-hero-grid"><div class="cs-hero-copy">{breadcrumb}{h}<p class="cs-hero-intro">{escape(intro)}</p><a class="cs-primary-button" href="{href}">{escape(label_cta)}</a></div><div class="cs-hero-frame cs-media-{kind}">{visual}</div></div></section>'
