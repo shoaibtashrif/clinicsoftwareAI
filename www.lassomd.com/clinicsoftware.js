@@ -6,30 +6,37 @@
   updateNavbar();
   window.addEventListener('scroll', updateNavbar, {passive: true});
 
-  // The downloaded Webflow navigation opens its mobile shell, but dropdowns
-  // marked for desktop hover do not expand reliably on touch devices.
-  document.querySelectorAll('.navbar .dd > .dd-toggle').forEach(toggle => {
-    toggle.addEventListener('click', event => {
-      if (!window.matchMedia('(max-width: 991px)').matches) return;
-      event.preventDefault();
-      event.stopPropagation();
-
-      const dropdown = toggle.closest('.dd');
-      const list = dropdown?.querySelector(':scope > .dd-list');
-      if (!dropdown || !list) return;
-
-      const willOpen = !list.classList.contains('w--open');
-      document.querySelectorAll('.navbar .dd-list.w--open').forEach(openList => {
-        openList.classList.remove('w--open');
-        openList.closest('.dd')?.querySelector(':scope > .dd-toggle')?.setAttribute('aria-expanded', 'false');
-      });
-
-      if (willOpen) {
-        list.classList.add('w--open');
-        toggle.setAttribute('aria-expanded', 'true');
-      }
-    }, true);
+  // Own only the simplified Solutions dropdown; Webflow retains the page layout.
+  const solutions = document.querySelector('.cs-solutions');
+  const trigger = solutions?.querySelector('.cs-solutions-toggle');
+  let closeTimer;
+  const setOpen = open => {
+    clearTimeout(closeTimer);
+    if (!solutions) return;
+    navbar.style.setProperty('--cs-menu-top', `${navbar.getBoundingClientRect().bottom}px`);
+    solutions.classList.toggle('is-open', open);
+    trigger.setAttribute('aria-expanded', String(open));
+  };
+  trigger?.addEventListener('click', () => setOpen(!solutions.classList.contains('is-open')));
+  solutions?.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'mouse' && matchMedia('(min-width:992px)').matches) setOpen(true);
   });
+  solutions?.addEventListener('pointerleave', event => {
+    if (event.pointerType === 'mouse') closeTimer = setTimeout(() => setOpen(false), 220);
+  });
+  solutions?.addEventListener('focusout', event => {
+    if (!solutions.contains(event.relatedTarget)) setOpen(false);
+  });
+  document.addEventListener('click', event => {
+    if (!solutions?.contains(event.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && solutions?.classList.contains('is-open')) {
+      setOpen(false);
+      trigger.focus();
+    }
+  });
+  window.addEventListener('resize', () => setOpen(false));
 
   document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', event => {

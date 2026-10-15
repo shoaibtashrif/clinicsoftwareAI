@@ -479,3 +479,7 @@ body {
     justify-content: center;
   }
 }
+
+/* Simplified navigation; existing content layout retained. */
+
+.cs-solutions-panel { text-align:left; }
