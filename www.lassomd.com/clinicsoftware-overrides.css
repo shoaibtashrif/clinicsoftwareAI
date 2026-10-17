@@ -567,3 +567,51 @@ main .cta-img[src*="/brand-assets/"] {
   object-fit: cover;
 }
 .product-image-wrap > img[src*="/brand-assets/"] { object-position: center top; }
+
+/* --- 2026-10-16 User requested tweaks --- */
+/* 1. Navbar menu title font size */
+.navbar .nav_main_links .nav-link-text {
+  font-size: 1.12rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em;
+}
+
+/* 2. Top-right button capitalized REQUEST MOCKUP */
+.navbar .nav-cta-wrapper .button {
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem !important;
+}
+
+/* 3. Hero graphic frame snug fit - remove vertical empty whitespace */
+.cs-service-hero .cs-hero-frame.cs-media-graphic {
+  aspect-ratio: auto !important;
+  height: auto !important;
+  background: #ffffff !important;
+}
+.cs-service-hero .cs-hero-frame.cs-media-graphic .cs-hero-media {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* 4. Delete bottom-left cookie overlay */
+.cookie-icon,
+.termly-display-preferences,
+[class*="cookie-icon"],
+#termly-code-snippet-support {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* 5. Hero primary button capitalized */
+.cs-primary-button {
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em !important;
+}
