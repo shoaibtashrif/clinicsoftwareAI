@@ -709,3 +709,31 @@ main .cta-img[src*="/brand-assets/"] {
 }
 
 
+
+/* Homepage "never misses the booking" section (2026-10-19) */
+.cs-journey-heading {
+  max-width: 980px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-wrap: balance;
+}
+.cs-journey-points {
+  display: grid !important;
+  gap: 18px !important;
+}
+.cs-journey-point {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 4px 0 4px 22px !important;
+  border-left: 3px solid #7c5cff !important;
+  font-size: 1.08rem !important;
+  line-height: 1.6 !important;
+  color: #2b2840 !important;
+}
+.cs-journey-point:first-child {
+  border-left-color: #4f9fd8 !important;
+}
+.home-product-image.cs-nexus-showcase {
+  object-fit: contain !important;
+  background: transparent !important;
+}
