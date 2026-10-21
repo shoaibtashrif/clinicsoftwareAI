@@ -849,3 +849,27 @@ footer.footer .footer-infolinks { width:100%; max-width:none; }
 @media(min-width:992px) {
   footer.footer .footer-contact-email { grid-row:1; margin-top:76px; justify-content:flex-start; }
 }
+
+/* FAQ alternative: centered heading and simple full-width accordion rows. */
+.faq_component:has(.faq_wrapper) { background:#fafafa !important; }
+.faq_component:has(.faq_wrapper) .container-medium {
+  display:block;
+  max-width:960px;
+}
+.faq_component .faq_header { text-align:center; max-width:760px; margin:0 auto 32px; }
+.faq_component .faq_header h2 { font-size:clamp(1.65rem,2.4vw,2.2rem); line-height:1.3; }
+.faq_component .faq_wrapper { gap:0; border-top:1px solid #dedbe5; }
+.faq_component .faq_item {
+  border:0; border-bottom:1px solid #dedbe5; border-radius:0;
+  background:transparent; box-shadow:none; overflow:hidden;
+}
+.faq_component .faq_toggle { padding:24px 4px; gap:24px; }
+.faq_component .faq_toggle-text { font-size:1.05rem; font-weight:600; }
+.faq_component .faq_icon { background:transparent; width:22px; height:22px; flex-basis:22px; padding:4px; border-radius:0; }
+.faq_component .faq_text { padding:0 44px 24px 4px; max-width:850px; }
+@media(max-width:600px) {
+  .faq_component .faq_header { margin-bottom:24px; text-align:left; }
+  .faq_component .faq_toggle { padding:20px 0; gap:16px; }
+  .faq_component .faq_toggle-text { font-size:1rem; }
+  .faq_component .faq_text { padding:0 30px 20px 0; }
+}
