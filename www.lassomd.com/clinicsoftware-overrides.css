@@ -745,3 +745,33 @@ main .cta-img[src*="/brand-assets/"] {
   object-fit: contain !important;
   background: transparent !important;
 }
+
+/* Local review: centered floating navigation with rounded ends. */
+.navbar {
+  width:80%;
+  margin:16px auto;
+  top:16px;
+  border:1px solid rgba(37,18,83,.1);
+  border-radius:999px;
+}
+.navbar > .padding-global { padding-left:24px; padding-right:24px; }
+.navbar .navbar_wrapper { min-height:4.65rem; }
+@media (min-width:992px) {
+  .navbar .navbar_logo { width:clamp(150px,15vw,220px); }
+  .navbar .nav-link-text { font-size:clamp(12px,1.05vw,16px); white-space:nowrap; }
+  .navbar .nav_main_links { gap:clamp(12px,1.5vw,24px); }
+  .navbar .nav-link { padding-left:0; padding-right:0; }
+  .navbar .nav-cta-wrapper .button { min-width:0; padding:12px 18px; font-size:12px !important; }
+}
+@media (max-width:991px) {
+  .navbar { width:calc(100% - 24px); margin:12px auto; top:12px; border-radius:32px; }
+  .navbar > .padding-global { padding-left:18px; padding-right:18px; }
+  .navbar .w-nav-overlay { border-radius:24px; }
+}
+@media (min-width:992px) {
+  .navbar .nav_main_links { display:flex !important; flex-direction:row !important; flex-wrap:nowrap !important; }
+  .navbar .nav_main_links .nav-link-text { font-size:clamp(12px,1.05vw,16px) !important; }
+  .navbar .navigation-left-side, .navbar .navbar_menu { gap:20px !important; }
+  .navbar .navbar_menu { padding:0; }
+  .navbar .nav-menu { margin-left:auto; }
+}
