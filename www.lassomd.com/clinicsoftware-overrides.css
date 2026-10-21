@@ -798,3 +798,54 @@ main .cta-img[src*="/brand-assets/"] {
 :is(h1,h2,h3,h4,p,li,.text-color-white,.text_color-white) { color:#292634; }
 :is(.background-color-purple,.overflow-hidden.dark-purple-color,.bg-dark-purple,.cta_component.is--new)
 a:not(.button) { color:#61469e; }
+
+/* Local FAQ/footer refresh: quiet surfaces, individual question cards, brand-led footer. */
+.faq_component:has(.faq_wrapper) { background:#f4f5f7 !important; }
+.faq_component:has(.faq_wrapper) .container-medium {
+  max-width:1180px; display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:48px; align-items:start;
+}
+.faq_component .faq_header { text-align:left; margin:0; }
+.faq_component .faq_header h2 { color:#30283f; font-size:clamp(1.8rem,2.6vw,2.5rem); line-height:1.2; letter-spacing:-.025em; }
+.faq_component .faq_wrapper { width:100%; gap:12px; display:flex; flex-direction:column; }
+.faq_component .faq_item { width:100%; border:1px solid #e3e0e9; background:#fff; border-radius:16px; overflow:hidden; margin:0; box-shadow:0 3px 12px #30283f04; }
+.faq_component .faq_toggle { padding:20px 22px; border:0; gap:18px; }
+.faq_component .faq_toggle-text { color:#30283f; font-size:1rem; font-weight:600; line-height:1.5; margin:0; }
+.faq_component .faq_icon { width:28px; height:28px; flex:0 0 28px; padding:8px; border-radius:50%; background:#f0ebf8; color:#7356ba; }
+.faq_component .faq_text { padding:0 22px 20px; margin:0; color:#575363; font-size:.95rem; line-height:1.75; }
+.faq_component .faq_div { display:none; }
+.faq_component .faq_toggle:focus-visible { outline:2px solid #7356ba; outline-offset:-3px; }
+footer.footer { background:#edf0f3; border-top:1px solid #dce0e6; }
+footer.footer .padding-section-medium { padding-top:48px; padding-bottom:32px; }
+footer.footer .container-medium { max-width:1280px; }
+footer.footer .footer_wrapper { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.6fr); gap:24px 48px; }
+footer.footer .footer_logo-wrapper { display:contents; }
+footer.footer .footer_brand { grid-column:1; grid-row:1; align-self:start; padding:0; }
+footer.footer .clinicsoftware-footer-logo { width:250px; max-width:100%; height:auto; }
+footer.footer .footer-contact-email { grid-column:1; grid-row:2; align-self:start; }
+footer.footer .footer_links-wrapper { grid-column:2; grid-row:1 / span 2; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; padding:0; margin:0; width:100%; }
+footer.footer .footer-sub-list { display:contents; }
+footer.footer .footer_links-block { border:0; padding:0; margin:0; width:100%; gap:12px; }
+footer.footer .footer_links-block.is-1 { grid-row:span 2; }
+footer.footer .menu-icon { display:none; }
+footer.footer .footer-link-title { color:#30283f; font-size:.95rem; font-weight:650; padding:0; }
+footer.footer .footer_link { color:#5b5666; font-size:.86rem; line-height:1.5; padding:0; }
+footer.footer a:hover { color:#7356ba; text-decoration:underline; text-underline-offset:4px; }
+footer.footer .footer-infolinks:not(.footer-contact-email) { grid-column:1 / -1; grid-row:3; border-top:1px solid #d5d9e0; padding-top:24px; margin-top:12px; display:flex; flex-wrap:wrap; justify-content:flex-start; gap:12px 24px; }
+@media(max-width:991px) {
+  .faq_component:has(.faq_wrapper) .container-medium { grid-template-columns:1fr; gap:24px; }
+  footer.footer .footer_wrapper { grid-template-columns:1fr; gap:24px; }
+  footer.footer .footer_brand { grid-column:1; grid-row:1; }
+  footer.footer .footer-contact-email { grid-column:1; grid-row:2; }
+  footer.footer .footer_links-wrapper { grid-column:1; grid-row:3; }
+  footer.footer .footer-infolinks:not(.footer-contact-email) { grid-column:1; grid-row:4; }
+}
+@media(max-width:600px) {
+  footer.footer .footer_links-wrapper { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 20px; }
+  footer.footer .footer_links-block.is-1 { grid-row:auto; }
+  .faq_component .faq_toggle { padding:18px 16px; }
+  .faq_component .faq_text { padding:0 16px 18px; }
+}
+footer.footer .footer-infolinks { width:100%; max-width:none; }
+@media(min-width:992px) {
+  footer.footer .footer-contact-email { grid-row:1; margin-top:76px; justify-content:flex-start; }
+}
