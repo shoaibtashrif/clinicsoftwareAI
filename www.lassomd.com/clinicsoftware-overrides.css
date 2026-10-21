@@ -828,3 +828,21 @@ main .cs-integrations-section { background:#eaf0f7 !important; }
 main .cs-service-hero .cs-hero-details,
 main .cs-service-hero .cs-hero-details p,
 main .cs-service-hero .cs-hero-details li { color:#d4e1ef; }
+
+/* Light hero direction: airy brand colors with readable navy typography. */
+main .cs-service-hero {
+  background:radial-gradient(ellipse at 100% 10%,#ebe7ff 0%,transparent 52%),radial-gradient(ellipse at 5% 100%,#e4f7f8 0%,transparent 45%),#fafcff !important;
+  border-bottom:1px solid #e1e8f1;
+}
+main .cs-service-hero .cs-hero-title { color:#182b43; }
+main .cs-service-hero .text-color-purple { color:#6650c3 !important; }
+main .cs-service-hero .cs-hero-intro,
+main .cs-service-hero .cs-hero-breadcrumb,
+main .cs-service-hero .cs-hero-details,
+main .cs-service-hero .cs-hero-details p,
+main .cs-service-hero .cs-hero-details li { color:#465970; }
+main .cs-service-hero .cs-primary-button {
+  background:#6450bf; border-color:#6450bf; color:#fff;
+  box-shadow:0 6px 18px #6450bf20;
+}
+main .cs-service-hero .cs-primary-button:hover { background:#51409e; color:#fff; }
