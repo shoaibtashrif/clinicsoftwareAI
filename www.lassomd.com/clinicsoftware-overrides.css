@@ -782,3 +782,49 @@ h1, h2, h3, .cs-hero-title, .homepage-h2, .heading-style-h2--homepage {
 @media (max-width: 767px) {
   .product-category-title { font-size: 1.5rem; }
 }
+
+/* Brand direction: midnight blue, pulse cyan and violet, rather than the source's pink theme. */
+:root { --clinic-ink:#142338; --clinic-violet:#6550cb; --clinic-soft:#f0f5fa; }
+body { background:#f7f9fc; }
+.navbar { border-bottom:1px solid #dfe7f0; box-shadow:0 3px 16px #14233808; }
+.navbar .nav-cta-wrapper .button,
+.navbar .button.is-purple-n, .navbar .button.is-nav {
+  background:#142b49 !important; color:#fff !important;
+  box-shadow:none !important; border-radius:999px !important;
+}
+main .cs-service-hero {
+  position:relative;
+  background:radial-gradient(ellipse at 95% 0%,#233b70 0%,transparent 55%),linear-gradient(120deg,#0d1b30,#142c47) !important;
+  border-bottom:3px solid #46d7e4;
+}
+main .cs-service-hero .cs-hero-title { color:#fff; font-weight:700; letter-spacing:-.045em; }
+main .cs-service-hero .text-color-purple { color:#7ce4eb !important; }
+main .cs-service-hero .cs-hero-intro,
+main .cs-service-hero .cs-hero-breadcrumb { color:#d4e1ef; }
+main .cs-service-hero .cs-hero-copy::before {
+  content:""; display:block; width:64px; height:5px; margin-bottom:24px;
+  border-radius:8px; background:linear-gradient(90deg,#37d2e2,#9372ff);
+}
+main .cs-primary-button {
+  background:#6550cb; border:1px solid #6550cb; border-radius:999px;
+  box-shadow:none; color:#fff; text-transform:none !important; letter-spacing:0 !important;
+}
+main .cs-service-hero .cs-primary-button {
+  background:#8ce6eb; border-color:#8ce6eb; color:#11283d;
+}
+main .cs-primary-button:hover { background:#4e3da8; color:white; }
+main .cs-service-hero .cs-primary-button:hover { background:#b3f2f4; color:#11283d; }
+main .cs-specialty-screenshots { background:#eaf0f7; border-bottom:1px solid #dce5ef; }
+main .home-services-sticky_component { background:#f7f9fc; }
+main .homepage-h2, main .heading-style-h2--homepage { color:#142b49; }
+main .product-category-title { color:#142b49 !important; -webkit-text-fill-color:#142b49; }
+main .home-services-sticky_component .anchors-icon { background:#def3f4; color:#126d79; }
+main .cs-journey-point { border-color:#6550cb; color:#34465c; }
+main .cs-journey-point:first-child { border-color:#1d9aa8; }
+main .cs-integrations-section { background:#eaf0f7 !important; }
+@media(max-width:767px) {
+  main .cs-service-hero .cs-hero-copy::before { margin-bottom:18px; }
+}
+main .cs-service-hero .cs-hero-details,
+main .cs-service-hero .cs-hero-details p,
+main .cs-service-hero .cs-hero-details li { color:#d4e1ef; }
