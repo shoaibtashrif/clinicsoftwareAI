@@ -5,3 +5,4 @@
 - Keep marketing hero media dimensions consistent, but let phone/device mockups stand freely at their natural proportions without an outer card or box. Use distinct artwork for distinct sections on the same page; responsive copies of the same section can share artwork.
 - Save each completed edit in a separate Git commit so it can be rolled back independently.
 - Image/media responses cache for 24 hours. When replacing an asset at an existing URL, change its filename or version query in its references so deployed edits are visible immediately.
+- Preview future design changes locally for the user first. Do not deploy design changes to the live server until the user explicitly approves deployment. (User preference, 2026-10-22.)
