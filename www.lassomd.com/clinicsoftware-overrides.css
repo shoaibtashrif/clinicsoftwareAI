@@ -588,14 +588,22 @@ main .cta-img[src*="/brand-assets/"] {
 .cs-service-hero .cs-hero-frame.cs-media-graphic {
   aspect-ratio: auto !important;
   height: auto !important;
-  background: #ffffff !important;
+  background: transparent !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 48px rgba(81, 48, 112, 0.12) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  border: none !important;
 }
 .cs-service-hero .cs-hero-frame.cs-media-graphic .cs-hero-media {
   width: 100% !important;
   height: auto !important;
   max-height: none !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 20px !important;
 }
 
 /* 4. Delete bottom-left cookie overlay */
