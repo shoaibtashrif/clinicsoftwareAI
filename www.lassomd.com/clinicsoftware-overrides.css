@@ -775,3 +775,26 @@ main .cta-img[src*="/brand-assets/"] {
   .navbar .navbar_menu { padding:0; }
   .navbar .nav-menu { margin-left:auto; }
 }
+
+/* Local review: filled service labels, purple link rules and neutral sections. */
+.product-category-title {
+  -webkit-text-stroke:0 transparent !important;
+  -webkit-text-fill-color:currentColor;
+  color:#4c396c !important;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:650;
+  letter-spacing:-.025em;
+}
+.button.is-text .button_text-line,
+.button.is-text .button_text-line-alt { background:#7356ba !important; }
+.background-color-purple,
+.overflow-hidden.dark-purple-color,
+.bg-dark-purple,
+.cta_component.is--new {
+  background:#f0f1f4 !important;
+  color:#292634 !important;
+}
+:is(.background-color-purple,.overflow-hidden.dark-purple-color,.bg-dark-purple,.cta_component.is--new)
+:is(h1,h2,h3,h4,p,li,.text-color-white,.text_color-white) { color:#292634; }
+:is(.background-color-purple,.overflow-hidden.dark-purple-color,.bg-dark-purple,.cta_component.is--new)
+a:not(.button) { color:#61469e; }
