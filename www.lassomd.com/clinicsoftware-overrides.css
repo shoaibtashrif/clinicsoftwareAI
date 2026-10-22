@@ -567,3 +567,309 @@ main .cta-img[src*="/brand-assets/"] {
   object-fit: cover;
 }
 .product-image-wrap > img[src*="/brand-assets/"] { object-position: center top; }
+
+/* --- 2026-10-16 User requested tweaks --- */
+/* 1. Navbar menu title font size */
+.navbar .nav_main_links .nav-link-text {
+  font-size: 1.12rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em;
+}
+
+/* 2. Top-right button capitalized REQUEST MOCKUP */
+.navbar .nav-cta-wrapper .button {
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem !important;
+}
+
+/* 3. Hero graphic frame snug fit - remove vertical empty whitespace */
+.cs-service-hero .cs-hero-frame.cs-media-graphic {
+  aspect-ratio: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 48px rgba(81, 48, 112, 0.12) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  border: none !important;
+}
+.cs-service-hero .cs-hero-frame.cs-media-graphic .cs-hero-media {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 20px !important;
+}
+
+/* 4. Delete bottom-left cookie overlay */
+.cookie-icon,
+.termly-display-preferences,
+[class*="cookie-icon"],
+#termly-code-snippet-support {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* 5. Hero primary button capitalized */
+.cs-primary-button {
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* 6. Integrations - Clean 10 Logos Grid */
+.cs-integrations-section {
+  padding: 64px 0 72px 0 !important;
+  background: #fbfbfd !important;
+  border-top: 1px solid #edf2f7 !important;
+  border-bottom: 1px solid #edf2f7 !important;
+  position: relative !important;
+}
+.cs-integrations-container {
+  max-width: 1140px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+.cs-integrations-header {
+  text-align: center !important;
+  max-width: 760px !important;
+  margin: 0 auto 36px auto !important;
+}
+.cs-integrations-header h2 {
+  font-size: 1.95rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.25 !important;
+  margin: 0 0 10px 0 !important;
+}
+.cs-integrations-sub {
+  font-size: 1.05rem !important;
+  color: #64748b !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+/* Pure 10 Logos Grid (2 Rows of 5) */
+.cs-logos-pure-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 16px !important;
+  max-width: 1080px !important;
+  margin: 0 auto !important;
+}
+.cs-pure-logo-tile {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  height: 74px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 12px 20px !important;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease !important;
+}
+.cs-pure-logo-tile:hover {
+  transform: translateY(-3px) !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07) !important;
+}
+.cs-pure-logo-img {
+  height: 30px !important;
+  width: auto !important;
+  max-width: 145px !important;
+  object-fit: contain !important;
+  display: block !important;
+  transition: transform 0.2s ease !important;
+}
+.cs-pure-logo-tile:hover .cs-pure-logo-img {
+  transform: scale(1.05) !important;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .cs-logos-pure-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+  }
+}
+@media (max-width: 600px) {
+  .cs-logos-pure-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .cs-pure-logo-tile {
+    height: 64px !important;
+    padding: 8px 14px !important;
+  }
+  .cs-pure-logo-img {
+    height: 26px !important;
+    max-width: 125px !important;
+  }
+}
+
+
+
+/* Homepage "never misses the booking" section (2026-10-19) */
+.cs-journey-heading {
+  max-width: 980px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-wrap: balance;
+}
+.cs-journey-points {
+  display: grid !important;
+  gap: 18px !important;
+}
+.cs-journey-point {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 4px 0 4px 22px !important;
+  border-left: 3px solid #7c5cff !important;
+  font-size: 1.08rem !important;
+  line-height: 1.6 !important;
+  color: #2b2840 !important;
+}
+.cs-journey-point:first-child {
+  border-left-color: #4f9fd8 !important;
+}
+.home-product-image.cs-nexus-showcase {
+  object-fit: contain !important;
+  background: transparent !important;
+}
+
+/* Local review: centered floating navigation with rounded ends. */
+.navbar {
+  width:80%;
+  margin:16px auto;
+  top:16px;
+  border:1px solid rgba(37,18,83,.1);
+  border-radius:999px;
+}
+.navbar > .padding-global { padding-left:24px; padding-right:24px; }
+.navbar .navbar_wrapper { min-height:4.65rem; }
+@media (min-width:992px) {
+  .navbar .navbar_logo { width:clamp(150px,15vw,220px); }
+  .navbar .nav-link-text { font-size:clamp(12px,1.05vw,16px); white-space:nowrap; }
+  .navbar .nav_main_links { gap:clamp(12px,1.5vw,24px); }
+  .navbar .nav-link { padding-left:0; padding-right:0; }
+  .navbar .nav-cta-wrapper .button { min-width:0; padding:12px 18px; font-size:12px !important; }
+}
+@media (max-width:991px) {
+  .navbar { width:calc(100% - 24px); margin:12px auto; top:12px; border-radius:32px; }
+  .navbar > .padding-global { padding-left:18px; padding-right:18px; }
+  .navbar .w-nav-overlay { border-radius:24px; }
+}
+@media (min-width:992px) {
+  .navbar .nav_main_links { display:flex !important; flex-direction:row !important; flex-wrap:nowrap !important; }
+  .navbar .nav_main_links .nav-link-text { font-size:clamp(12px,1.05vw,16px) !important; }
+  .navbar .navigation-left-side, .navbar .navbar_menu { gap:20px !important; }
+  .navbar .navbar_menu { padding:0; }
+  .navbar .nav-menu { margin-left:auto; }
+}
+
+/* Local review: filled service labels, purple link rules and neutral sections. */
+.product-category-title {
+  -webkit-text-stroke:0 transparent !important;
+  -webkit-text-fill-color:currentColor;
+  color:#4c396c !important;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:650;
+  letter-spacing:-.025em;
+}
+.button.is-text .button_text-line,
+.button.is-text .button_text-line-alt { background:#7356ba !important; }
+.background-color-purple,
+.overflow-hidden.dark-purple-color,
+.bg-dark-purple,
+.cta_component.is--new {
+  background:#f0f1f4 !important;
+  color:#292634 !important;
+}
+:is(.background-color-purple,.overflow-hidden.dark-purple-color,.bg-dark-purple,.cta_component.is--new)
+:is(h1,h2,h3,h4,p,li,.text-color-white,.text_color-white) { color:#292634; }
+:is(.background-color-purple,.overflow-hidden.dark-purple-color,.bg-dark-purple,.cta_component.is--new)
+a:not(.button) { color:#61469e; }
+
+/* Local FAQ/footer refresh: quiet surfaces, individual question cards, brand-led footer. */
+.faq_component:has(.faq_wrapper) { background:#f4f5f7 !important; }
+.faq_component:has(.faq_wrapper) .container-medium {
+  max-width:1180px; display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:48px; align-items:start;
+}
+.faq_component .faq_header { text-align:left; margin:0; }
+.faq_component .faq_header h2 { color:#30283f; font-size:clamp(1.8rem,2.6vw,2.5rem); line-height:1.2; letter-spacing:-.025em; }
+.faq_component .faq_wrapper { width:100%; gap:12px; display:flex; flex-direction:column; }
+.faq_component .faq_item { width:100%; border:1px solid #e3e0e9; background:#fff; border-radius:16px; overflow:hidden; margin:0; box-shadow:0 3px 12px #30283f04; }
+.faq_component .faq_toggle { padding:20px 22px; border:0; gap:18px; }
+.faq_component .faq_toggle-text { color:#30283f; font-size:1rem; font-weight:600; line-height:1.5; margin:0; }
+.faq_component .faq_icon { width:28px; height:28px; flex:0 0 28px; padding:8px; border-radius:50%; background:#f0ebf8; color:#7356ba; }
+.faq_component .faq_text { padding:0 22px 20px; margin:0; color:#575363; font-size:.95rem; line-height:1.75; }
+.faq_component .faq_div { display:none; }
+.faq_component .faq_toggle:focus-visible { outline:2px solid #7356ba; outline-offset:-3px; }
+footer.footer { background:#edf0f3; border-top:1px solid #dce0e6; }
+footer.footer .padding-section-medium { padding-top:48px; padding-bottom:32px; }
+footer.footer .container-medium { max-width:1280px; }
+footer.footer .footer_wrapper { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2.6fr); gap:24px 48px; }
+footer.footer .footer_logo-wrapper { display:contents; }
+footer.footer .footer_brand { grid-column:1; grid-row:1; align-self:start; padding:0; }
+footer.footer .clinicsoftware-footer-logo { width:250px; max-width:100%; height:auto; }
+footer.footer .footer-contact-email { grid-column:1; grid-row:2; align-self:start; }
+footer.footer .footer_links-wrapper { grid-column:2; grid-row:1 / span 2; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; padding:0; margin:0; width:100%; }
+footer.footer .footer-sub-list { display:contents; }
+footer.footer .footer_links-block { border:0; padding:0; margin:0; width:100%; gap:12px; }
+footer.footer .footer_links-block.is-1 { grid-row:span 2; }
+footer.footer .menu-icon { display:none; }
+footer.footer .footer-link-title { color:#30283f; font-size:.95rem; font-weight:650; padding:0; }
+footer.footer .footer_link { color:#5b5666; font-size:.86rem; line-height:1.5; padding:0; }
+footer.footer a:hover { color:#7356ba; text-decoration:underline; text-underline-offset:4px; }
+footer.footer .footer-infolinks:not(.footer-contact-email) { grid-column:1 / -1; grid-row:3; border-top:1px solid #d5d9e0; padding-top:24px; margin-top:12px; display:flex; flex-wrap:wrap; justify-content:flex-start; gap:12px 24px; }
+@media(max-width:991px) {
+  .faq_component:has(.faq_wrapper) .container-medium { grid-template-columns:1fr; gap:24px; }
+  footer.footer .footer_wrapper { grid-template-columns:1fr; gap:24px; }
+  footer.footer .footer_brand { grid-column:1; grid-row:1; }
+  footer.footer .footer-contact-email { grid-column:1; grid-row:2; }
+  footer.footer .footer_links-wrapper { grid-column:1; grid-row:3; }
+  footer.footer .footer-infolinks:not(.footer-contact-email) { grid-column:1; grid-row:4; }
+}
+@media(max-width:600px) {
+  footer.footer .footer_links-wrapper { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 20px; }
+  footer.footer .footer_links-block.is-1 { grid-row:auto; }
+  .faq_component .faq_toggle { padding:18px 16px; }
+  .faq_component .faq_text { padding:0 16px 18px; }
+}
+footer.footer .footer-infolinks { width:100%; max-width:none; }
+@media(min-width:992px) {
+  footer.footer .footer-contact-email { grid-row:1; margin-top:76px; justify-content:flex-start; }
+}
+
+/* FAQ alternative: centered heading and simple full-width accordion rows. */
+.faq_component:has(.faq_wrapper) { background:#fafafa !important; }
+.faq_component:has(.faq_wrapper) .container-medium {
+  display:block;
+  max-width:960px;
+}
+.faq_component .faq_header { text-align:center; max-width:760px; margin:0 auto 32px; }
+.faq_component .faq_header h2 { font-size:clamp(1.65rem,2.4vw,2.2rem); line-height:1.3; }
+.faq_component .faq_wrapper { gap:0; border-top:1px solid #dedbe5; }
+.faq_component .faq_item {
+  border:0; border-bottom:1px solid #dedbe5; border-radius:0;
+  background:transparent; box-shadow:none; overflow:hidden;
+}
+.faq_component .faq_toggle { padding:24px 4px; gap:24px; }
+.faq_component .faq_toggle-text { font-size:1.05rem; font-weight:600; }
+.faq_component .faq_icon { background:transparent; width:22px; height:22px; flex-basis:22px; padding:4px; border-radius:0; }
+.faq_component .faq_text { padding:0 44px 24px 4px; max-width:850px; }
+@media(max-width:600px) {
+  .faq_component .faq_header { margin-bottom:24px; text-align:left; }
+  .faq_component .faq_toggle { padding:20px 0; gap:16px; }
+  .faq_component .faq_toggle-text { font-size:1rem; }
+  .faq_component .faq_text { padding:0 30px 20px 0; }
+}

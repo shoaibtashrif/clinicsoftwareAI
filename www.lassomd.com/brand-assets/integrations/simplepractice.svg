@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 44" fill="none">
+  <circle cx="18" cy="22" r="11" fill="#0284C7"/>
+  <path d="M13 22C13 18 18 16 21 19C23 22 19 26 15 24" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  <text x="36" y="28" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" font-weight="700" fill="#0F172A" letter-spacing="-0.5">SimplePractice</text>
+</svg>
